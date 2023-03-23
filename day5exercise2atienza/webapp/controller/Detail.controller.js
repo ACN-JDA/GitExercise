@@ -4,10 +4,11 @@ sap.ui.define(
         "sap/ui/core/routing/History",
         "sap/ui/core/UIComponent"
     ],
-    function(Controller, History, UIComponent) {
+    function (Controller, History, UIComponent) {
       "use strict";
   
-      return BaseController.extend("zbtp.day5exercise2atienza.controller.Detail", {
+      return Controller.extend("zbtp.day5exercise2atienza.controller.Detail", {
+
         onInit: function () {
           var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
           oRouter.getRoute("Detail").attachPatternMatched(this._onObjectMatched, this);

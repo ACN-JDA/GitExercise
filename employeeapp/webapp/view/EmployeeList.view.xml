@@ -1,0 +1,65 @@
+<mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+	<Table id="idProductsTable"
+		inset="false"
+        mode= "MultiSelect"
+		items="{EmployeeModel>/Employee}">
+
+		<headerToolbar>
+            <Toolbar>
+				<SearchField width="100%" margin="left" />
+				<ToolbarSpacer/>
+				<Button type="Add" text="Add" press="onPress" />
+                <Button type="Delete" text="Delete" press="onPress" />
+				<ToolbarSpacer/>
+			</Toolbar>
+		</headerToolbar>
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="Employee List"/>
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column width="12em">
+				<Text text="Employee ID" />
+			</Column>
+			<Column width="12em">
+				<Text text="First Name" />
+			</Column>
+			<Column width="12em">
+				<Text text="Last Name" />
+			</Column>
+			<Column width="12em">
+				<Text text="Age" />
+			</Column>
+			<Column width="12em">
+				<Text text="Date of Hire" />
+			</Column>
+			<Column width="12em">
+				<Text text="Career Level" />
+			</Column>
+			<Column width="12em">
+				<Text text="Current Project" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle" type="Navigation">
+				<cells>
+					<ObjectIdentifier
+						title="{Name}"
+						text="{EmployeeModel>EmployeeID}"/>
+                    <Text text="{EmployeeModel>FirstName}" />
+                    <Text text="{EmployeeModel>LastName}" />
+                    <Text text="{EmployeeModel>Age}" />
+                    <Text text="{EmployeeModel>DateHire}" />
+                    <Text text="{EmployeeModel>CarrerLevel}" />
+                    <Text text="{EmployeeModel>CurrentProject}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+    </Page>
+</mvc:View>
