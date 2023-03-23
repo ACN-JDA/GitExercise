@@ -6,7 +6,7 @@ sap.ui.define([
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, JSONModel, formatter) {
         "use strict";
 
         return Controller.extend("sapips.training.jsonbinding.controller.JSONBinding", {
